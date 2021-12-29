@@ -11,7 +11,38 @@
 		0C730475277BD567001FF7EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C730474277BD567001FF7EF /* ViewController.swift */; };
 		0C730477277BD568001FF7EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C730476277BD567001FF7EF /* Assets.xcassets */; };
 		0C73047A277BD568001FF7EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C730478277BD568001FF7EF /* Main.storyboard */; };
+		0C73048A277BD5F4001FF7EF /* OSLogAlternativeConsoleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C730489277BD5F4001FF7EF /* OSLogAlternativeConsoleService.swift */; };
+		0C73048C277BD5F4001FF7EF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C73048B277BD5F4001FF7EF /* main.swift */; };
+		0C730490277BD5F4001FF7EF /* OSLogAlternativeConsoleService.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = 0C730485277BD5F4001FF7EF /* OSLogAlternativeConsoleService.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0C730495277BD6AB001FF7EF /* OSLogAlternativeConsoleServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C730488277BD5F4001FF7EF /* OSLogAlternativeConsoleServiceDelegate.swift */; };
+		0C730496277BD6AD001FF7EF /* OSLogAlternativeConsoleServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C730487277BD5F4001FF7EF /* OSLogAlternativeConsoleServiceProtocol.swift */; };
+		0C730498277BDAB1001FF7EF /* OSLogServiceCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C730497277BDAB1001FF7EF /* OSLogServiceCaller.swift */; };
+		0C730499277BDAC5001FF7EF /* OSLogAlternativeConsoleServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C730487277BD5F4001FF7EF /* OSLogAlternativeConsoleServiceProtocol.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0C73048E277BD5F4001FF7EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C730467277BD567001FF7EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C730484277BD5F4001FF7EF;
+			remoteInfo = OSLogAlternativeConsoleService;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0C730494277BD5F4001FF7EF /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				0C730490277BD5F4001FF7EF /* OSLogAlternativeConsoleService.xpc in Embed XPC Services */,
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0C73046F277BD567001FF7EF /* AlternativeConsole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlternativeConsole.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,10 +51,24 @@
 		0C730476277BD567001FF7EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C730479277BD568001FF7EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C73047B277BD568001FF7EF /* AlternativeConsole.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlternativeConsole.entitlements; sourceTree = "<group>"; };
+		0C730485277BD5F4001FF7EF /* OSLogAlternativeConsoleService.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = OSLogAlternativeConsoleService.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C730487277BD5F4001FF7EF /* OSLogAlternativeConsoleServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLogAlternativeConsoleServiceProtocol.swift; sourceTree = "<group>"; };
+		0C730488277BD5F4001FF7EF /* OSLogAlternativeConsoleServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLogAlternativeConsoleServiceDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		0C730489277BD5F4001FF7EF /* OSLogAlternativeConsoleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLogAlternativeConsoleService.swift; sourceTree = "<group>"; };
+		0C73048B277BD5F4001FF7EF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0C73048D277BD5F4001FF7EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C730497277BDAB1001FF7EF /* OSLogServiceCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLogServiceCaller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0C73046C277BD567001FF7EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C730482277BD5F4001FF7EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				0C730471277BD567001FF7EF /* AlternativeConsole */,
+				0C730486277BD5F4001FF7EF /* OSLogAlternativeConsoleService */,
+				0CAA3C7B277D23EC00DF20A8 /* OSLog Service Commons */,
 				0C730470277BD567001FF7EF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				0C73046F277BD567001FF7EF /* AlternativeConsole.app */,
+				0C730485277BD5F4001FF7EF /* OSLogAlternativeConsoleService.xpc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,8 +105,36 @@
 				0C730476277BD567001FF7EF /* Assets.xcassets */,
 				0C730478277BD568001FF7EF /* Main.storyboard */,
 				0C73047B277BD568001FF7EF /* AlternativeConsole.entitlements */,
+				0C730497277BDAB1001FF7EF /* OSLogServiceCaller.swift */,
 			);
 			path = AlternativeConsole;
+			sourceTree = "<group>";
+		};
+		0C730486277BD5F4001FF7EF /* OSLogAlternativeConsoleService */ = {
+			isa = PBXGroup;
+			children = (
+				0C730488277BD5F4001FF7EF /* OSLogAlternativeConsoleServiceDelegate.swift */,
+				0C730489277BD5F4001FF7EF /* OSLogAlternativeConsoleService.swift */,
+				0C73048B277BD5F4001FF7EF /* main.swift */,
+				0C73048D277BD5F4001FF7EF /* Info.plist */,
+			);
+			path = OSLogAlternativeConsoleService;
+			sourceTree = "<group>";
+		};
+		0CAA3C7B277D23EC00DF20A8 /* OSLog Service Commons */ = {
+			isa = PBXGroup;
+			children = (
+				0CAA3C7C277D241700DF20A8 /* Interface */,
+			);
+			path = "OSLog Service Commons";
+			sourceTree = "<group>";
+		};
+		0CAA3C7C277D241700DF20A8 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				0C730487277BD5F4001FF7EF /* OSLogAlternativeConsoleServiceProtocol.swift */,
+			);
+			path = Interface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,15 +147,34 @@
 				0C73046B277BD567001FF7EF /* Sources */,
 				0C73046C277BD567001FF7EF /* Frameworks */,
 				0C73046D277BD567001FF7EF /* Resources */,
+				0C730494277BD5F4001FF7EF /* Embed XPC Services */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0C73048F277BD5F4001FF7EF /* PBXTargetDependency */,
 			);
 			name = AlternativeConsole;
 			productName = AlternativeConsole;
 			productReference = 0C73046F277BD567001FF7EF /* AlternativeConsole.app */;
 			productType = "com.apple.product-type.application";
+		};
+		0C730484277BD5F4001FF7EF /* OSLogAlternativeConsoleService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C730491277BD5F4001FF7EF /* Build configuration list for PBXNativeTarget "OSLogAlternativeConsoleService" */;
+			buildPhases = (
+				0C730481277BD5F4001FF7EF /* Sources */,
+				0C730482277BD5F4001FF7EF /* Frameworks */,
+				0C730483277BD5F4001FF7EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OSLogAlternativeConsoleService;
+			productName = OSLogAlternativeConsoleService;
+			productReference = 0C730485277BD5F4001FF7EF /* OSLogAlternativeConsoleService.xpc */;
+			productType = "com.apple.product-type.xpc-service";
 		};
 /* End PBXNativeTarget section */
 
@@ -92,6 +187,9 @@
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					0C73046E277BD567001FF7EF = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					0C730484277BD5F4001FF7EF = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
@@ -110,6 +208,7 @@
 			projectRoot = "";
 			targets = (
 				0C73046E277BD567001FF7EF /* AlternativeConsole */,
+				0C730484277BD5F4001FF7EF /* OSLogAlternativeConsoleService */,
 			);
 		};
 /* End PBXProject section */
@@ -124,6 +223,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0C730483277BD5F4001FF7EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -131,12 +237,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C730499277BDAC5001FF7EF /* OSLogAlternativeConsoleServiceProtocol.swift in Sources */,
+				0C730498277BDAB1001FF7EF /* OSLogServiceCaller.swift in Sources */,
 				0C730475277BD567001FF7EF /* ViewController.swift in Sources */,
 				0C730473277BD567001FF7EF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0C730481277BD5F4001FF7EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C730496277BD6AD001FF7EF /* OSLogAlternativeConsoleServiceProtocol.swift in Sources */,
+				0C73048C277BD5F4001FF7EF /* main.swift in Sources */,
+				0C730495277BD6AB001FF7EF /* OSLogAlternativeConsoleServiceDelegate.swift in Sources */,
+				0C73048A277BD5F4001FF7EF /* OSLogAlternativeConsoleService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0C73048F277BD5F4001FF7EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C730484277BD5F4001FF7EF /* OSLogAlternativeConsoleService */;
+			targetProxy = 0C73048E277BD5F4001FF7EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0C730478277BD568001FF7EF /* Main.storyboard */ = {
@@ -275,6 +402,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -282,7 +410,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dnl.labs.AlternativeConsole;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -300,6 +428,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -307,10 +436,54 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dnl.labs.AlternativeConsole;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		0C730492277BD5F4001FF7EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OSLogAlternativeConsoleService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OSLogAlternativeConsoleService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dnl.labs.OSLogAlternativeConsoleService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0C730493277BD5F4001FF7EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OSLogAlternativeConsoleService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OSLogAlternativeConsoleService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dnl.labs.OSLogAlternativeConsoleService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -332,6 +505,15 @@
 			buildConfigurations = (
 				0C73047F277BD568001FF7EF /* Debug */,
 				0C730480277BD568001FF7EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C730491277BD5F4001FF7EF /* Build configuration list for PBXNativeTarget "OSLogAlternativeConsoleService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C730492277BD5F4001FF7EF /* Debug */,
+				0C730493277BD5F4001FF7EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
