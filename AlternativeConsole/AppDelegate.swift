@@ -11,7 +11,7 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        OSLogServiceCaller.entries { messages in
+        OSLogServiceCaller.entries(subsystem: "com.apple.runningboard", from: 60) { messages in
             messages.forEach {
                 print($0)
             }

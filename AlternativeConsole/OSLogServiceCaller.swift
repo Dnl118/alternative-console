@@ -11,6 +11,8 @@ class OSLogServiceCaller {
     static let serviceName = "com.dnl.labs.OSLogAlternativeConsoleService"
     
     class func entries(
+        subsystem: String,
+        from seconds: TimeInterval,
         withReply reply: @escaping ([String]) -> Void
     ) {
         let connection = NSXPCConnection(serviceName: serviceName)
@@ -21,6 +23,10 @@ class OSLogServiceCaller {
             print("Unable to connect to \(serviceName) due to \(error.localizedDescription)")
         } as? OSLogAlternativeConsoleServiceProtocol
         
-        service?.entries(withReply: reply)
+        service?.entries(
+            subsystem: subsystem,
+            from: seconds,
+            withReply: reply
+        )
     }
 }

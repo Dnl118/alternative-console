@@ -10,24 +10,64 @@ import OSLog
 
 class OSLogAlternativeConsoleService: NSObject, OSLogAlternativeConsoleServiceProtocol {
     
-    func entries(withReply reply: @escaping ([String]) -> Void) {
+    func entries(
+        subsystem: String,
+        from seconds: TimeInterval,
+        withReply reply: @escaping ([String]) -> Void
+    ) {
         
         do {
             let store = try OSLogStore.local()
             
-            let postion = store.position(timeIntervalSinceEnd: -5)
+            // Setting the desired position.
+            let oneHourAgo = store.position(date: Date().addingTimeInterval(-seconds))
             
-            let entries = try store.getEntries(with: [], at: postion, matching: nil)
+            let predicate = NSPredicate(format: "subsystem == %@", subsystem)
             
-            let messages = entries.compactMap {
-                return "\($0.date) \($0.composedMessage)"
+            // Fetching log objects.
+            let subsystemEntries = try store
+                .getEntries(
+                    with: [],
+                    at: oneHourAgo,
+                    matching: predicate
+                )
+            
+            // Removing other elements such as signposts,
+            // converting OSLogEntry -> OSLogEntryLog.
+            let filteredEntries = subsystemEntries
+                .compactMap { $0 as? OSLogEntryLog }
+            
+            let messages = filteredEntries.compactMap {
+                return makeMessage(entry: $0)
             }
             
             reply(messages)
             
         } catch {
-            print(error)
-            reply([])
+            reply([error.localizedDescription])
+        }
+    }
+    
+    private func makeMessage(entry: OSLogEntryLog) -> String {
+        return "\(entry.date) \(makeReadableLevel(entryLevel: entry.level)) \(entry.process) \(entry.composedMessage)"
+    }
+    
+    private func makeReadableLevel(entryLevel: OSLogEntryLog.Level) -> String {
+        switch entryLevel {
+        case .undefined:
+            return "undefined"
+        case .debug:
+            return "debug"
+        case .info:
+            return "info"
+        case .notice:
+            return "notice"
+        case .error:
+            return "error"
+        case .fault:
+            return "fault"
+        @unknown default:
+            return "unknoen"
         }
     }
 }

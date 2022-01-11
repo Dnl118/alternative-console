@@ -8,5 +8,9 @@
 import Foundation
 
 @objc public protocol OSLogAlternativeConsoleServiceProtocol {
-    func entries(withReply reply: @escaping ([String]) -> Void)
+    func entries(
+        subsystem: String,
+        from seconds: TimeInterval,
+        withReply reply: @escaping ([String]) -> Void
+    )
 }
