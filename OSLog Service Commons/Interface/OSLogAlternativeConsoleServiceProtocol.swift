@@ -10,7 +10,7 @@ import Foundation
 @objc public protocol OSLogAlternativeConsoleServiceProtocol {
     func entries(
         subsystem: String,
-        from seconds: TimeInterval,
+        from secondsAgo: TimeInterval,
         withReply reply: @escaping ([String]) -> Void
     )
 }
