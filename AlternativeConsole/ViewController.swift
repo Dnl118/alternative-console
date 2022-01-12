@@ -14,7 +14,7 @@ class ViewController: NSViewController {
     
     @IBOutlet var outputTextView: NSTextView!
     
-    private let defaultSeconds: TimeInterval = 60
+    private let defaultSeconds: TimeInterval = 1800
     private let defaultSubsystem = "com.apple.loginwindow.logging"
     
     override func viewDidLoad() {
@@ -22,6 +22,12 @@ class ViewController: NSViewController {
         
         subsystemTextField.stringValue = defaultSubsystem
         secondsTextField.stringValue = "\(defaultSeconds)"
+    }
+    
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        
+        prepareForLoginWindow()
     }
     
     @IBAction func okClick(_ sender: Any) {
@@ -41,6 +47,13 @@ class ViewController: NSViewController {
             DispatchQueue.main.async {
                 self.outputTextView.string = messages.joined(separator: "\n")
             }
+        }
+    }
+    
+    private func prepareForLoginWindow() {
+        if NSUserName() == "root" {
+            view.window?.canBecomeVisibleWithoutLogin = true
+            view.window?.level = .screenSaver
         }
     }
 }

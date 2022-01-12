@@ -20,12 +20,12 @@ struct OSLogEntryLogMessageFormatter {
     func message(entry: OSLogEntryLog) -> String {
         let values: [String] = [
             dateFormatter.string(from: entry.date),
-            readableLevel(entryLevel: entry.level),
+            "[\(readableLevel(entryLevel: entry.level))]",
             entry.process,
             entry.composedMessage
         ]
         
-        return values.joined(separator: " ")
+        return values.joined(separator: "  ")
     }
     
     private func readableLevel(entryLevel: OSLogEntryLog.Level) -> String {
