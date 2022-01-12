@@ -60,6 +60,7 @@
 		0C73048B277BD5F4001FF7EF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0C73048D277BD5F4001FF7EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C730497277BDAB1001FF7EF /* OSLogServiceCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLogServiceCaller.swift; sourceTree = "<group>"; };
+		0CCC0040278F9E4300F083D7 /* ui_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_image.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +87,7 @@
 				0C730471277BD567001FF7EF /* AlternativeConsole */,
 				0C730486277BD5F4001FF7EF /* OSLogAlternativeConsoleService */,
 				0CAA3C7B277D23EC00DF20A8 /* OSLog Service Commons */,
+				0CCC003F278F9E4300F083D7 /* Extras */,
 				0C730470277BD567001FF7EF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -138,6 +140,14 @@
 				0C730487277BD5F4001FF7EF /* OSLogAlternativeConsoleServiceProtocol.swift */,
 			);
 			path = Interface;
+			sourceTree = "<group>";
+		};
+		0CCC003F278F9E4300F083D7 /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				0CCC0040278F9E4300F083D7 /* ui_image.png */,
+			);
+			path = Extras;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
