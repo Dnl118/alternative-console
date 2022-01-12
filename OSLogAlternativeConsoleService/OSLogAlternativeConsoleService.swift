@@ -37,37 +37,16 @@ class OSLogAlternativeConsoleService: NSObject, OSLogAlternativeConsoleServicePr
             let filteredEntries = subsystemEntries
                 .compactMap { $0 as? OSLogEntryLog }
             
+            let formatter = OSLogEntryLogMessageFormatter()
+            
             let messages = filteredEntries.compactMap {
-                return makeMessage(entry: $0)
+                return formatter.message(entry: $0)
             }
             
             reply(messages)
             
         } catch {
             reply([error.localizedDescription])
-        }
-    }
-    
-    private func makeMessage(entry: OSLogEntryLog) -> String {
-        return "\(entry.date) \(makeReadableLevel(entryLevel: entry.level)) \(entry.process) \(entry.composedMessage)"
-    }
-    
-    private func makeReadableLevel(entryLevel: OSLogEntryLog.Level) -> String {
-        switch entryLevel {
-        case .undefined:
-            return "undefined"
-        case .debug:
-            return "debug"
-        case .info:
-            return "info"
-        case .notice:
-            return "notice"
-        case .error:
-            return "error"
-        case .fault:
-            return "fault"
-        @unknown default:
-            return "unknoen"
         }
     }
 }

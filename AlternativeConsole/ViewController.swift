@@ -15,12 +15,12 @@ class ViewController: NSViewController {
     @IBOutlet var outputTextView: NSTextView!
     
     private let defaultSeconds: TimeInterval = 60
-    
-    
+    private let defaultSubsystem = "com.apple.loginwindow.logging"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        subsystemTextField.stringValue = defaultSubsystem
         secondsTextField.stringValue = "\(defaultSeconds)"
     }
     

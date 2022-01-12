@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C48B0E6278F93CA0070473A /* OSLogEntryLogMessageFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C48B0E5278F93CA0070473A /* OSLogEntryLogMessageFormatter.swift */; };
 		0C730473277BD567001FF7EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C730472277BD567001FF7EF /* AppDelegate.swift */; };
 		0C730475277BD567001FF7EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C730474277BD567001FF7EF /* ViewController.swift */; };
 		0C730477277BD568001FF7EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C730476277BD567001FF7EF /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C48B0E5278F93CA0070473A /* OSLogEntryLogMessageFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLogEntryLogMessageFormatter.swift; sourceTree = "<group>"; };
 		0C73046F277BD567001FF7EF /* AlternativeConsole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlternativeConsole.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C730472277BD567001FF7EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C730474277BD567001FF7EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				0C730488277BD5F4001FF7EF /* OSLogAlternativeConsoleServiceDelegate.swift */,
 				0C730489277BD5F4001FF7EF /* OSLogAlternativeConsoleService.swift */,
 				0C73048B277BD5F4001FF7EF /* main.swift */,
+				0C48B0E5278F93CA0070473A /* OSLogEntryLogMessageFormatter.swift */,
 				0C73048D277BD5F4001FF7EF /* Info.plist */,
 			);
 			path = OSLogAlternativeConsoleService;
@@ -249,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C730496277BD6AD001FF7EF /* OSLogAlternativeConsoleServiceProtocol.swift in Sources */,
+				0C48B0E6278F93CA0070473A /* OSLogEntryLogMessageFormatter.swift in Sources */,
 				0C73048C277BD5F4001FF7EF /* main.swift in Sources */,
 				0C730495277BD6AB001FF7EF /* OSLogAlternativeConsoleServiceDelegate.swift in Sources */,
 				0C73048A277BD5F4001FF7EF /* OSLogAlternativeConsoleService.swift in Sources */,
