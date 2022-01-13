@@ -54,6 +54,7 @@ class ViewController: NSViewController {
         if NSUserName() == "root" {
             view.window?.canBecomeVisibleWithoutLogin = true
             view.window?.level = .screenSaver
+            view.window?.orderFrontRegardless()
         }
     }
 }

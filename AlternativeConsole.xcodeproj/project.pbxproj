@@ -61,6 +61,7 @@
 		0C73048D277BD5F4001FF7EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C730497277BDAB1001FF7EF /* OSLogServiceCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLogServiceCaller.swift; sourceTree = "<group>"; };
 		0CCC0040278F9E4300F083D7 /* ui_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_image.png; sourceTree = "<group>"; };
+		0CCC0041278FA50600F083D7 /* com.dnl.labs.AlternativeConsole.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = com.dnl.labs.AlternativeConsole.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				0CCC0040278F9E4300F083D7 /* ui_image.png */,
+				0CCC0041278FA50600F083D7 /* com.dnl.labs.AlternativeConsole.plist */,
 			);
 			path = Extras;
 			sourceTree = "<group>";

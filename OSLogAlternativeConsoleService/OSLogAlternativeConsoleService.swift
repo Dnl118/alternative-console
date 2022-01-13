@@ -20,7 +20,7 @@ class OSLogAlternativeConsoleService: NSObject, OSLogAlternativeConsoleServicePr
             let store = try OSLogStore.local()
             
             // Setting the desired position.
-            let oneHourAgo = store.position(date: Date().addingTimeInterval(-secondsAgo))
+            let desiredPosition = store.position(date: Date().addingTimeInterval(-secondsAgo))
             
             let predicate = NSPredicate(format: "subsystem == %@", subsystem)
             
@@ -28,7 +28,7 @@ class OSLogAlternativeConsoleService: NSObject, OSLogAlternativeConsoleServicePr
             let subsystemEntries = try store
                 .getEntries(
                     with: [],
-                    at: oneHourAgo,
+                    at: desiredPosition,
                     matching: predicate
                 )
             
